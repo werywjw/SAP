@@ -3,12 +3,12 @@ import csv
 import os
 
 def json_to_csv(category):
-    json_file = os.path.join('datasets', 'SAP10', category, 'generated_cases.json')
+    json_file = os.path.join('datasets', 'SAP20', category, 'generated_cases.json')
     
     with open(json_file, 'r') as jsf:
         data = json.load(jsf)
         
-    csv_file = f'SAP10_{category}.csv'
+    csv_file = f'SAP20_{category}.csv'
 
     with open(csv_file, 'w', newline='') as csvf:
         csvwriter = csv.writer(csvf)
